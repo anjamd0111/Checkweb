@@ -227,8 +227,9 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 <script>
 // ── CONFIG ──
 const VOICE_ID = '21m00Tcm4TlvDq8ikWAM'; // Rachel – multilingual
-let ELEVEN_KEY = '';
-let voiceEnabled = false;
+const ELEVEN_KEY_HARDCODED = 'sk_142b4f56c62f5329fd24a43413e6aa2c44bad928ea79f56c';
+let ELEVEN_KEY = ELEVEN_KEY_HARDCODED;
+let voiceEnabled = true;
 
 // ── CANVAS PARTICLES ──
 const cv = document.getElementById('bgCanvas');
@@ -281,6 +282,13 @@ function skipKey() {
   document.getElementById('voiceBadge').innerHTML = '🔇 Voice বন্ধ';
   document.getElementById('voiceTag').textContent = '✦  Voice ছাড়া চ্যাট মোড';
 }
+// Auto-start with hardcoded key
+(function(){
+  document.getElementById('keyModal').classList.add('hidden');
+  document.getElementById('voiceBadge').innerHTML = '🎙️ ElevenLabs';
+  document.getElementById('voiceBadge').style.color = 'var(--c3)';
+  document.getElementById('voiceTag').textContent = '✦  ElevenLabs Human Voice সক্রিয়';
+})();
 
 // ── STATE ──
 const cwEl = document.getElementById('cw');
@@ -440,7 +448,10 @@ async function send() {
   try {
     const r = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
