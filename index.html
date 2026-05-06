@@ -20,7 +20,6 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans Bengali','Out
 .mesh{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse 80% 60% at 10% 10%,rgba(66,153,225,.12) 0,transparent 55%),radial-gradient(ellipse 60% 50% at 90% 90%,rgba(104,211,145,.08) 0,transparent 55%),radial-gradient(ellipse 50% 40% at 50% 50%,rgba(127,156,245,.06) 0,transparent 50%);}
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.025) 3px,rgba(0,0,0,.025) 4px);}
 
-/* HEADER */
 header{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:13px 26px;background:rgba(6,8,16,.9);backdrop-filter:blur(28px);border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:13px}
 .logo-ring{position:relative;width:46px;height:46px;display:flex;align-items:center;justify-content:center;}
@@ -36,14 +35,12 @@ header{position:relative;z-index:20;display:flex;align-items:center;justify-cont
 .ldot{width:6px;height:6px;border-radius:50%;background:var(--c3);box-shadow:0 0 7px var(--c3);animation:livePulse 1.8s ease-in-out infinite;}
 @keyframes livePulse{0%,100%{opacity:1}50%{opacity:.25}}
 
-/* MAIN */
 main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overflow:hidden;}
 #chat{flex:1;overflow-y:auto;padding:28px 20px 12px;scroll-behavior:smooth;}
 #chat::-webkit-scrollbar{width:3px}
 #chat::-webkit-scrollbar-thumb{background:rgba(99,179,237,.15);border-radius:2px}
 .cw{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
 
-/* WELCOME */
 .welcome{display:flex;flex-direction:column;align-items:center;padding:28px 20px 16px;text-align:center;animation:fu .8s cubic-bezier(.16,1,.3,1) both;}
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .horb{position:relative;width:118px;height:118px;display:flex;align-items:center;justify-content:center;margin-bottom:26px;}
@@ -57,7 +54,6 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 .chip{background:var(--s2);border:1px solid rgba(99,179,237,.12);border-radius:100px;padding:9px 17px;font-size:.77rem;color:var(--text2);cursor:pointer;transition:all .22s;font-family:'Outfit',sans-serif;white-space:nowrap;}
 .chip:hover{background:rgba(99,179,237,.08);border-color:rgba(99,179,237,.35);color:var(--c1);transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,179,237,.1);}
 
-/* MESSAGES */
 .msg{display:flex;gap:12px;animation:fu .38s cubic-bezier(.16,1,.3,1) both;}
 .msg.user{flex-direction:row-reverse}
 .av{width:40px;height:40px;border-radius:13px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
@@ -69,7 +65,6 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 .msg.ai .bubble{background:var(--s1);border:1px solid rgba(99,179,237,.1);border-top-left-radius:4px;color:var(--text);}
 .msg.user .bubble{background:var(--ugrad);border-top-right-radius:4px;color:#fff;box-shadow:0 5px 22px rgba(49,130,206,.22);}
 
-/* speak row */
 .srow{display:flex;align-items:center;gap:9px;margin-top:7px;}
 .sbtn{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:100px;background:rgba(99,179,237,.07);border:1px solid rgba(99,179,237,.18);color:var(--c1);font-size:.69rem;cursor:pointer;font-family:'Outfit',sans-serif;letter-spacing:.5px;transition:all .2s;}
 .sbtn:hover{background:rgba(99,179,237,.14);border-color:var(--c1)}
@@ -82,7 +77,6 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 .wbar{width:3px;border-radius:3px;background:var(--c3);animation:wb var(--d,.5s) ease-in-out infinite alternate;animation-delay:var(--dl,0s);}
 @keyframes wb{from{height:3px}to{height:var(--h,14px)}}
 
-/* TYPING */
 .tmsg{display:flex;gap:12px;animation:fu .3s ease both}
 .tbub{background:var(--s1);border:1px solid rgba(99,179,237,.1);border-radius:18px;border-top-left-radius:4px;padding:14px 18px;display:flex;gap:7px;align-items:center;}
 .td{width:8px;height:8px;border-radius:50%;animation:td 1.2s ease-in-out infinite;}
@@ -91,13 +85,11 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 .td:nth-child(3){background:var(--c3);box-shadow:0 0 6px var(--c3);animation-delay:.36s}
 @keyframes td{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-9px);opacity:1}}
 
-/* MIC VIZ */
 #micviz{display:none;justify-content:center;align-items:center;gap:3px;padding:7px 0;height:42px;}
 #micviz.on{display:flex}
 .mvb{width:3.5px;border-radius:3px;background:linear-gradient(to top,var(--c2),var(--c1));box-shadow:0 0 5px rgba(99,179,237,.35);animation:mv var(--d,.5s) ease-in-out infinite alternate;animation-delay:var(--dl,0s);}
 @keyframes mv{from{height:3px}to{height:var(--h,26px)}}
 
-/* INPUT */
 .iz{position:relative;z-index:20;padding:11px 20px 15px;background:rgba(6,8,16,.92);backdrop-filter:blur(28px);border-top:1px solid var(--border);}
 .ic{max-width:820px;margin:0 auto}
 .irow{display:flex;align-items:flex-end;gap:9px;background:var(--s1);border:1.5px solid rgba(99,179,237,.12);border-radius:20px;padding:10px 11px;transition:border-color .2s,box-shadow .2s;}
@@ -119,13 +111,26 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 #rl.on{opacity:1}
 .rdot{width:6px;height:6px;border-radius:50%;background:var(--c5);animation:livePulse .8s ease-in-out infinite;}
 
-/* code */
 .bubble pre{background:rgba(0,0,0,.45);border:1px solid rgba(99,179,237,.1);border-radius:10px;padding:14px;overflow-x:auto;font-size:.78rem;margin:9px 0;line-height:1.55;font-family:'Courier New',monospace;color:#90cdf4;}
 .bubble code{background:rgba(99,179,237,.1);padding:2px 6px;border-radius:4px;font-size:.83em;font-family:'Courier New',monospace;color:var(--c1);}
 .bubble pre code{background:transparent;padding:0;color:#90cdf4}
 .bubble strong{color:var(--c1)}
 .bubble ul,.bubble ol{padding-left:18px;margin:5px 0}
 .bubble li{margin-bottom:3px}
+
+/* ElevenLabs key modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
+.modal{background:var(--s1);border:1px solid rgba(99,179,237,.25);border-radius:20px;padding:28px;max-width:440px;width:100%;box-shadow:0 0 60px rgba(99,179,237,.1);}
+.modal h2{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;}
+.modal p{color:var(--text2);font-size:.85rem;line-height:1.7;margin-bottom:18px;}
+.modal input{width:100%;background:var(--s2);border:1.5px solid rgba(99,179,237,.18);border-radius:12px;padding:11px 14px;color:var(--text);font-size:.88rem;font-family:'Outfit',sans-serif;outline:none;transition:border-color .2s;margin-bottom:12px;}
+.modal input:focus{border-color:rgba(99,179,237,.45);}
+.modal-btns{display:flex;gap:10px;}
+.modal-btn{flex:1;padding:11px;border-radius:12px;border:none;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.modal-btn.primary{background:linear-gradient(135deg,#3182ce,#63b3ed);color:#fff;box-shadow:0 4px 14px rgba(49,130,206,.3);}
+.modal-btn.secondary{background:rgba(99,179,237,.07);border:1px solid rgba(99,179,237,.2);color:var(--c1);}
+.modal-btn:hover{transform:translateY(-1px);}
+.hidden{display:none!important;}
 
 @media(max-width:600px){
   .welcome h1{font-size:2rem}
@@ -139,6 +144,20 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 
 <canvas id="bgCanvas"></canvas>
 <div class="mesh"></div>
+
+<!-- ElevenLabs Key Modal -->
+<div class="modal-overlay" id="keyModal">
+  <div class="modal">
+    <h2>🎙️ ElevenLabs Voice সেটআপ</h2>
+    <p>Voice ফিচার ব্যবহার করতে আপনার ElevenLabs API Key দিন। Key ছাড়াও চ্যাট করতে পারবেন — শুধু voice কাজ করবে না।<br><br>
+    <strong style="color:var(--c1)">🔗 elevenlabs.io</strong> থেকে ফ্রি key নিন।</p>
+    <input type="password" id="keyInput" placeholder="sk_xxxxxxxxxxxxxxxx" autocomplete="off"/>
+    <div class="modal-btns">
+      <button class="modal-btn primary" onclick="saveKey()">✅ সেভ করুন</button>
+      <button class="modal-btn secondary" onclick="skipKey()">⏭️ এড়িয়ে যান</button>
+    </div>
+  </div>
+</div>
 
 <header>
   <div class="logo">
@@ -159,7 +178,7 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
     </div>
   </div>
   <div class="header-right">
-    <div class="badge badge-voice">🎙️ ElevenLabs</div>
+    <div class="badge badge-voice" id="voiceBadge">🎙️ Voice অফ</div>
     <div class="badge badge-live"><div class="ldot"></div>অনলাইন</div>
   </div>
 </header>
@@ -173,8 +192,8 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
           <div class="hcore">🧿</div>
         </div>
         <h1>আমি Anjan AI</h1>
-        <p class="wsub">আপনার বুদ্ধিমান বাংলা সহকারী — যেকোনো প্রশ্ন করুন, সেরা উত্তর খুঁজে দেবো এবং <strong style="color:var(--c1)">মানুষের কণ্ঠে</strong> শুনিয়ে দেবো।</p>
-        <div class="wtag">✦ &nbsp;ElevenLabs Human Voice সক্রিয়</div>
+        <p class="wsub">আপনার বুদ্ধিমান বাংলা সহকারী — যেকোনো প্রশ্ন করুন, সেরা উত্তর খুঁজে দেবো।</p>
+        <div class="wtag" id="voiceTag">✦ &nbsp;Voice লোড হচ্ছে...</div>
         <div class="chips">
           <div class="chip" onclick="useChip(this)">🌍 বাংলাদেশের ইতিহাস বলো</div>
           <div class="chip" onclick="useChip(this)">🤖 AI কীভাবে কাজ করে?</div>
@@ -207,134 +226,225 @@ main{flex:1;display:flex;flex-direction:column;position:relative;z-index:3;overf
 
 <script>
 // ── CONFIG ──
-const ELEVEN_KEY='sk_142b4f56c62f5329fd24a43413e6aa2c44bad928ea79f56c';
-const VOICE_ID='21m00Tcm4TlvDq8ikWAM'; // Rachel – multilingual natural voice
-const MODEL='claude-sonnet-4-20250514';
+const VOICE_ID = '21m00Tcm4TlvDq8ikWAM'; // Rachel – multilingual
+let ELEVEN_KEY = '';
+let voiceEnabled = false;
 
 // ── CANVAS PARTICLES ──
-const cv=document.getElementById('bgCanvas');
-const cx=cv.getContext('2d');
-let W,H,pts=[];
-function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight;pts=[];for(let i=0;i<100;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:.3+Math.random()*1.4,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,a:.1+Math.random()*.55,c:['#63b3ed','#68d391','#7f9cf5','#f6ad55'][0|Math.random()*4]});}
-function draw(){cx.clearRect(0,0,W,H);for(const p of pts){cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=p.c;cx.globalAlpha=p.a;cx.fill();p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;}cx.globalAlpha=1;requestAnimationFrame(draw);}
-addEventListener('resize',rsz);rsz();draw();
+const cv = document.getElementById('bgCanvas');
+const cx = cv.getContext('2d');
+let W, H, pts = [];
+function rsz() {
+  W = cv.width = innerWidth; H = cv.height = innerHeight; pts = [];
+  for (let i = 0; i < 100; i++) pts.push({
+    x: Math.random() * W, y: Math.random() * H,
+    r: .3 + Math.random() * 1.4, vx: (Math.random() - .5) * .2, vy: (Math.random() - .5) * .2,
+    a: .1 + Math.random() * .55, c: ['#63b3ed', '#68d391', '#7f9cf5', '#f6ad55'][0 | Math.random() * 4]
+  });
+}
+function draw() {
+  cx.clearRect(0, 0, W, H);
+  for (const p of pts) {
+    cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    cx.fillStyle = p.c; cx.globalAlpha = p.a; cx.fill();
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+    if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+  }
+  cx.globalAlpha = 1; requestAnimationFrame(draw);
+}
+addEventListener('resize', rsz); rsz(); draw();
 
 // ── MIC VIZ BARS ──
-const mvEl=document.getElementById('micviz');
-for(let i=0;i<30;i++){const b=document.createElement('div');b.className='mvb';const h=8+Math.random()*22;b.style.cssText=`--h:${h}px;--d:${.25+Math.random()*.5}s;--dl:${Math.random()*.3}s`;mvEl.appendChild(b);}
+const mvEl = document.getElementById('micviz');
+for (let i = 0; i < 30; i++) {
+  const b = document.createElement('div'); b.className = 'mvb';
+  const h = 8 + Math.random() * 22;
+  b.style.cssText = `--h:${h}px;--d:${.25 + Math.random() * .5}s;--dl:${Math.random() * .3}s`;
+  mvEl.appendChild(b);
+}
+
+// ── KEY MODAL ──
+function saveKey() {
+  const k = document.getElementById('keyInput').value.trim();
+  if (!k) { alert('Key দিন!'); return; }
+  ELEVEN_KEY = k;
+  voiceEnabled = true;
+  document.getElementById('keyModal').classList.add('hidden');
+  document.getElementById('voiceBadge').innerHTML = '🎙️ ElevenLabs';
+  document.getElementById('voiceBadge').style.color = 'var(--c3)';
+  document.getElementById('voiceTag').textContent = '✦  ElevenLabs Human Voice সক্রিয়';
+}
+function skipKey() {
+  voiceEnabled = false;
+  document.getElementById('keyModal').classList.add('hidden');
+  document.getElementById('voiceBadge').innerHTML = '🔇 Voice বন্ধ';
+  document.getElementById('voiceTag').textContent = '✦  Voice ছাড়া চ্যাট মোড';
+}
 
 // ── STATE ──
-const cwEl=document.getElementById('cw');
-const uiEl=document.getElementById('ui');
-const sbEl=document.getElementById('sb');
-const mbEl=document.getElementById('mb');
-const rlEl=document.getElementById('rl');
-let hist=[],busy=false,recognition=null,recording=false,curAudio=null,curBtn=null;
+const cwEl = document.getElementById('cw');
+const uiEl = document.getElementById('ui');
+const sbEl = document.getElementById('sb');
+const mbEl = document.getElementById('mb');
+const rlEl = document.getElementById('rl');
+let hist = [], busy = false, recognition = null, recording = false, curAudio = null, curBtn = null;
 
 // ── TEXTAREA ──
-uiEl.addEventListener('input',function(){this.style.height='auto';this.style.height=Math.min(this.scrollHeight,130)+'px';});
-uiEl.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();if(!busy)send();}});
-function useChip(el){uiEl.value=el.textContent.slice(2).trim();send();}
+uiEl.addEventListener('input', function () {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 130) + 'px';
+});
+uiEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (!busy) send(); }
+});
+function useChip(el) { uiEl.value = el.textContent.slice(2).trim(); send(); }
 
 // ── ADD MESSAGE ──
-function addMsg(role,text){
-  const w=document.getElementById('welcome');if(w)w.remove();
-  const d=document.createElement('div');d.className=`msg ${role}`;
-  const av=document.createElement('div');av.className=`av ${role}`;
-  av.textContent=role==='ai'?'🧿':'আ';
-  const bw=document.createElement('div');bw.className='bwrap';
-  const bub=document.createElement('div');bub.className='bubble';
-  bub.innerHTML=fmt(text);
+function addMsg(role, text) {
+  const w = document.getElementById('welcome'); if (w) w.remove();
+  const d = document.createElement('div'); d.className = `msg ${role}`;
+  const av = document.createElement('div'); av.className = `av ${role}`;
+  av.textContent = role === 'ai' ? '🧿' : 'আ';
+  const bw = document.createElement('div'); bw.className = 'bwrap';
+  const bub = document.createElement('div'); bub.className = 'bubble';
+  bub.innerHTML = fmt(text);
   bw.appendChild(bub);
-  if(role==='ai'){
-    const sr=document.createElement('div');sr.className='srow';
-    const wave=document.createElement('div');wave.className='waverow';
-    for(let i=0;i<13;i++){const b=document.createElement('div');b.className='wbar';const h=5+Math.random()*13;b.style.cssText=`--h:${h}px;--d:${.22+Math.random()*.44}s;--dl:${Math.random()*.28}s`;wave.appendChild(b);}
-    const btn=document.createElement('button');btn.className='sbtn';btn.innerHTML='🔊 শুনুন';
-    btn.onclick=()=>elevPlay(text,btn,wave);
-    sr.appendChild(btn);sr.appendChild(wave);bw.appendChild(sr);
+  if (role === 'ai') {
+    const sr = document.createElement('div'); sr.className = 'srow';
+    const wave = document.createElement('div'); wave.className = 'waverow';
+    for (let i = 0; i < 13; i++) {
+      const b = document.createElement('div'); b.className = 'wbar';
+      const h = 5 + Math.random() * 13;
+      b.style.cssText = `--h:${h}px;--d:${.22 + Math.random() * .44}s;--dl:${Math.random() * .28}s`;
+      wave.appendChild(b);
+    }
+    const btn = document.createElement('button'); btn.className = 'sbtn';
+    btn.innerHTML = voiceEnabled ? '🔊 শুনুন' : '🔇 Voice বন্ধ';
+    if (voiceEnabled) {
+      btn.onclick = () => elevPlay(text, btn, wave);
+    } else {
+      btn.onclick = () => {
+        document.getElementById('keyModal').classList.remove('hidden');
+      };
+      btn.style.opacity = '.5';
+    }
+    sr.appendChild(btn); sr.appendChild(wave); bw.appendChild(sr);
   }
-  d.appendChild(av);d.appendChild(bw);cwEl.appendChild(d);scrollBot();
+  d.appendChild(av); d.appendChild(bw); cwEl.appendChild(d); scrollBot();
   return bw;
 }
 
-function fmt(t){
-  t=t.replace(/```(\w+)?\n?([\s\S]*?)```/g,(_,l,c)=>`<pre><code>${esc(c.trim())}</code></pre>`);
-  t=t.replace(/`([^`]+)`/g,'<code>$1</code>');
-  t=t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
-  t=t.replace(/\*(.*?)\*/g,'<em>$1</em>');
-  t=t.replace(/^#{1,3}\s(.+)/gm,'<strong>$1</strong>');
-  t=t.replace(/\n/g,'<br>');
+function fmt(t) {
+  t = t.replace(/```(\w+)?\n?([\s\S]*?)```/g, (_, l, c) => `<pre><code>${esc(c.trim())}</code></pre>`);
+  t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+  t = t.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  t = t.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  t = t.replace(/^#{1,3}\s(.+)/gm, '<strong>$1</strong>');
+  t = t.replace(/\n/g, '<br>');
   return t;
 }
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
 
-function showT(){const d=document.createElement('div');d.className='tmsg';d.id='td';d.innerHTML=`<div class="av ai">🧿</div><div class="tbub"><div class="td"></div><div class="td"></div><div class="td"></div></div>`;cwEl.appendChild(d);scrollBot();}
-function hideT(){const t=document.getElementById('td');if(t)t.remove();}
-function scrollBot(){const c=document.getElementById('chat');setTimeout(()=>c.scrollTo({top:c.scrollHeight,behavior:'smooth'}),55);}
+function showT() {
+  const d = document.createElement('div'); d.className = 'tmsg'; d.id = 'td';
+  d.innerHTML = `<div class="av ai">🧿</div><div class="tbub"><div class="td"></div><div class="td"></div><div class="td"></div></div>`;
+  cwEl.appendChild(d); scrollBot();
+}
+function hideT() { const t = document.getElementById('td'); if (t) t.remove(); }
+function scrollBot() { const c = document.getElementById('chat'); setTimeout(() => c.scrollTo({ top: c.scrollHeight, behavior: 'smooth' }), 55); }
 
 // ── ELEVENLABS TTS ──
-async function elevPlay(text,btn,wave){
-  if(curAudio&&!curAudio.paused){
-    curAudio.pause();curAudio=null;
-    if(curBtn){curBtn.className='sbtn';curBtn.innerHTML='🔊 শুনুন';curBtn._w&&curBtn._w.classList.remove('show');}
-    if(curBtn===btn){curBtn=null;return;}
+async function elevPlay(text, btn, wave) {
+  if (!voiceEnabled) {
+    document.getElementById('keyModal').classList.remove('hidden');
+    return;
   }
-  const plain=text.replace(/```[\s\S]*?```/g,' কোড ').replace(/<[^>]+>/g,'').replace(/[*_`#]/g,'').replace(/\s+/g,' ').trim();
-  btn.className='sbtn loading';btn.innerHTML='⏳ লোড...';curBtn=btn;btn._w=wave;
-  try{
-    const r=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,{
-      method:'POST',
-      headers:{'xi-api-key':ELEVEN_KEY,'Content-Type':'application/json','Accept':'audio/mpeg'},
-      body:JSON.stringify({
-        text:plain,
-        model_id:'eleven_multilingual_v2',
-        voice_settings:{stability:.5,similarity_boost:.78,style:.28,use_speaker_boost:true}
+  if (curAudio && !curAudio.paused) {
+    curAudio.pause(); curAudio = null;
+    if (curBtn) { curBtn.className = 'sbtn'; curBtn.innerHTML = '🔊 শুনুন'; curBtn._w && curBtn._w.classList.remove('show'); }
+    if (curBtn === btn) { curBtn = null; return; }
+  }
+  const plain = text
+    .replace(/```[\s\S]*?```/g, ' কোড ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/[*_`#]/g, '')
+    .replace(/\s+/g, ' ').trim();
+
+  btn.className = 'sbtn loading'; btn.innerHTML = '⏳ লোড...'; curBtn = btn; btn._w = wave;
+  try {
+    const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
+      method: 'POST',
+      headers: { 'xi-api-key': ELEVEN_KEY, 'Content-Type': 'application/json', 'Accept': 'audio/mpeg' },
+      body: JSON.stringify({
+        text: plain,
+        model_id: 'eleven_multilingual_v2',
+        voice_settings: { stability: .5, similarity_boost: .78, style: .28, use_speaker_boost: true }
       })
     });
-    if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.detail?.message||`HTTP ${r.status}`);}
-    const blob=await r.blob();
-    const url=URL.createObjectURL(blob);
-    const audio=new Audio(url);curAudio=audio;
-    audio.onplay=()=>{btn.className='sbtn playing';btn.innerHTML='⏹️ থামান';wave.classList.add('show');};
-    audio.onended=audio.onerror=()=>{btn.className='sbtn';btn.innerHTML='🔊 শুনুন';wave.classList.remove('show');curAudio=null;curBtn=null;URL.revokeObjectURL(url);};
+    if (!r.ok) {
+      const e = await r.json().catch(() => ({}));
+      throw new Error(e.detail?.message || `HTTP ${r.status}`);
+    }
+    const blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    const audio = new Audio(url); curAudio = audio;
+    audio.onplay = () => { btn.className = 'sbtn playing'; btn.innerHTML = '⏹️ থামান'; wave.classList.add('show'); };
+    audio.onended = audio.onerror = () => {
+      btn.className = 'sbtn'; btn.innerHTML = '🔊 শুনুন';
+      wave.classList.remove('show'); curAudio = null; curBtn = null; URL.revokeObjectURL(url);
+    };
     audio.play();
-  }catch(err){
-    btn.className='sbtn err';btn.innerHTML='⚠️ ত্রুটি';
-    setTimeout(()=>{btn.className='sbtn';btn.innerHTML='🔊 শুনুন';},3200);
-    curBtn=null;console.error('ElevenLabs:',err);
+  } catch (err) {
+    btn.className = 'sbtn err'; btn.innerHTML = '⚠️ Key ভুল?';
+    setTimeout(() => { btn.className = 'sbtn'; btn.innerHTML = '🔊 শুনুন'; }, 3200);
+    curBtn = null; console.error('ElevenLabs:', err);
+    // Show modal to re-enter key
+    setTimeout(() => document.getElementById('keyModal').classList.remove('hidden'), 500);
   }
 }
 
 // ── SPEECH RECOGNITION ──
-function toggleMic(){
-  if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){addMsg('ai','⚠️ Chrome ব্রাউজার ব্যবহার করুন।');return;}
-  recording?stopMic():startMic();
+function toggleMic() {
+  if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+    addMsg('ai', '⚠️ Chrome ব্রাউজার ব্যবহার করুন।'); return;
+  }
+  recording ? stopMic() : startMic();
 }
-function startMic(){
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  recognition=new SR();recognition.lang='bn-BD';recognition.continuous=false;recognition.interimResults=true;
-  recognition.onstart=()=>{recording=true;mbEl.classList.add('rec');mbEl.textContent='⏹️';rlEl.classList.add('on');mvEl.classList.add('on');};
-  recognition.onresult=e=>{let f='',i='';for(let j=e.resultIndex;j<e.results.length;j++){if(e.results[j].isFinal)f+=e.results[j][0].transcript;else i+=e.results[j][0].transcript;}uiEl.value=f||i;uiEl.style.height='auto';uiEl.style.height=Math.min(uiEl.scrollHeight,130)+'px';};
-  recognition.onend=()=>{stopMicUI();if(uiEl.value.trim()&&!busy)send();};
-  recognition.onerror=e=>{stopMicUI();if(e.error!=='aborted')addMsg('ai',`🎙️ ত্রুটি: ${e.error}`);};
+function startMic() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR(); recognition.lang = 'bn-BD'; recognition.continuous = false; recognition.interimResults = true;
+  recognition.onstart = () => { recording = true; mbEl.classList.add('rec'); mbEl.textContent = '⏹️'; rlEl.classList.add('on'); mvEl.classList.add('on'); };
+  recognition.onresult = e => {
+    let f = '', i = '';
+    for (let j = e.resultIndex; j < e.results.length; j++) {
+      if (e.results[j].isFinal) f += e.results[j][0].transcript;
+      else i += e.results[j][0].transcript;
+    }
+    uiEl.value = f || i; uiEl.style.height = 'auto'; uiEl.style.height = Math.min(uiEl.scrollHeight, 130) + 'px';
+  };
+  recognition.onend = () => { stopMicUI(); if (uiEl.value.trim() && !busy) send(); };
+  recognition.onerror = e => { stopMicUI(); if (e.error !== 'aborted') addMsg('ai', `🎙️ ত্রুটি: ${e.error}`); };
   recognition.start();
 }
-function stopMic(){if(recognition)recognition.stop();}
-function stopMicUI(){recording=false;mbEl.classList.remove('rec');mbEl.textContent='🎙️';rlEl.classList.remove('on');mvEl.classList.remove('on');}
+function stopMic() { if (recognition) recognition.stop(); }
+function stopMicUI() { recording = false; mbEl.classList.remove('rec'); mbEl.textContent = '🎙️'; rlEl.classList.remove('on'); mvEl.classList.remove('on'); }
 
-// ── CLAUDE API ──
-async function send(){
-  const text=uiEl.value.trim();if(!text||busy)return;
-  uiEl.value='';uiEl.style.height='auto';busy=true;sbEl.disabled=true;
-  addMsg('user',text);hist.push({role:'user',content:text});showT();
-  try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:MODEL,max_tokens:1000,
-        system:`তুমি Anjan AI — একটি অত্যন্ত বুদ্ধিমান বাংলা ভয়েস AI সহকারী।
+// ── CLAUDE API (via Anthropic artifacts endpoint) ──
+async function send() {
+  const text = uiEl.value.trim(); if (!text || busy) return;
+  uiEl.value = ''; uiEl.style.height = 'auto'; busy = true; sbEl.disabled = true;
+  addMsg('user', text);
+  hist.push({ role: 'user', content: text });
+  showT();
+  try {
+    const r = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `তুমি Anjan AI — একটি অত্যন্ত বুদ্ধিমান বাংলা ভয়েস AI সহকারী।
 
 নিয়মসমূহ:
 ১. সর্বদা বাংলায় উত্তর দাও — যে ভাষায়ই প্রশ্ন আসুক
@@ -344,22 +454,28 @@ async function send(){
 ৫. সংক্ষিপ্ত কিন্তু তথ্যপূর্ণ — ৩-৬ প্যারাগ্রাফ আদর্শ
 ৬. কোড থাকলে সঠিক ব্লকে দাও
 ৭. বন্ধুত্বপূর্ণ ও আত্মবিশ্বাসী স্বরে কথা বলো`,
-        messages:hist
+        messages: hist
       })
     });
-    const data=await r.json();hideT();
-    if(data.error)throw new Error(data.error.message);
-    const reply=data.content.map(b=>b.text||'').join('');
-    hist.push({role:'assistant',content:reply});
-    addMsg('ai',reply);
-    // Auto-play voice after response
-    setTimeout(()=>{
-      const btns=cwEl.querySelectorAll('.sbtn');
-      const last=btns[btns.length-1];
-      if(last)last.click();
-    },450);
-  }catch(err){hideT();addMsg('ai',`⚠️ সমস্যা হয়েছে: ${err.message}`);}
-  busy=false;sbEl.disabled=false;uiEl.focus();
+    const data = await r.json();
+    hideT();
+    if (data.error) throw new Error(data.error.message);
+    const reply = data.content.map(b => b.text || '').join('');
+    hist.push({ role: 'assistant', content: reply });
+    addMsg('ai', reply);
+    // Auto-play voice if enabled
+    if (voiceEnabled) {
+      setTimeout(() => {
+        const btns = cwEl.querySelectorAll('.sbtn');
+        const last = btns[btns.length - 1];
+        if (last && last.innerHTML.includes('শুনুন')) last.click();
+      }, 450);
+    }
+  } catch (err) {
+    hideT();
+    addMsg('ai', `⚠️ সমস্যা হয়েছে: ${err.message}`);
+  }
+  busy = false; sbEl.disabled = false; uiEl.focus();
 }
 </script>
 </body>
